@@ -31,7 +31,7 @@
             this.radSandwich = new System.Windows.Forms.RadioButton();
             this.radFries = new System.Windows.Forms.RadioButton();
             this.radSoft = new System.Windows.Forms.RadioButton();
-            this.rad = new System.Windows.Forms.RadioButton();
+            this.radWater = new System.Windows.Forms.RadioButton();
             this.grpItems = new System.Windows.Forms.GroupBox();
             this.grpSize = new System.Windows.Forms.GroupBox();
             this.radLarge = new System.Windows.Forms.RadioButton();
@@ -57,6 +57,7 @@
             this.radSandwich.TabIndex = 1;
             this.radSandwich.Text = "Sandwich";
             this.radSandwich.UseVisualStyleBackColor = true;
+            this.radSandwich.CheckedChanged += new System.EventHandler(this.radSandwich_CheckedChanged);
             // 
             // radFries
             // 
@@ -67,6 +68,7 @@
             this.radFries.TabIndex = 2;
             this.radFries.Text = "Fries";
             this.radFries.UseVisualStyleBackColor = true;
+            this.radFries.CheckedChanged += new System.EventHandler(this.radFries_CheckedChanged);
             // 
             // radSoft
             // 
@@ -77,21 +79,23 @@
             this.radSoft.TabIndex = 3;
             this.radSoft.Text = "Soft Drink";
             this.radSoft.UseVisualStyleBackColor = true;
+            this.radSoft.CheckedChanged += new System.EventHandler(this.radSoft_CheckedChanged);
             // 
-            // rad
+            // radWater
             // 
-            this.rad.AutoSize = true;
-            this.rad.Location = new System.Drawing.Point(6, 116);
-            this.rad.Name = "rad";
-            this.rad.Size = new System.Drawing.Size(75, 24);
-            this.rad.TabIndex = 4;
-            this.rad.Text = "Water";
-            this.rad.UseVisualStyleBackColor = true;
+            this.radWater.AutoSize = true;
+            this.radWater.Location = new System.Drawing.Point(6, 116);
+            this.radWater.Name = "radWater";
+            this.radWater.Size = new System.Drawing.Size(75, 24);
+            this.radWater.TabIndex = 4;
+            this.radWater.Text = "Water";
+            this.radWater.UseVisualStyleBackColor = true;
+            this.radWater.CheckedChanged += new System.EventHandler(this.radWater_CheckedChanged);
             // 
             // grpItems
             // 
             this.grpItems.Controls.Add(this.radSandwich);
-            this.grpItems.Controls.Add(this.rad);
+            this.grpItems.Controls.Add(this.radWater);
             this.grpItems.Controls.Add(this.radFries);
             this.grpItems.Controls.Add(this.radSoft);
             this.grpItems.Location = new System.Drawing.Point(50, 32);
@@ -124,6 +128,7 @@
             this.radLarge.TabIndex = 2;
             this.radLarge.Text = "Large";
             this.radLarge.UseVisualStyleBackColor = true;
+            this.radLarge.CheckedChanged += new System.EventHandler(this.radLarge_CheckedChanged);
             // 
             // radMedium
             // 
@@ -135,6 +140,7 @@
             this.radMedium.TabIndex = 1;
             this.radMedium.Text = "Medium";
             this.radMedium.UseVisualStyleBackColor = true;
+            this.radMedium.CheckedChanged += new System.EventHandler(this.radMedium_CheckedChanged);
             // 
             // radSmall
             // 
@@ -146,6 +152,7 @@
             this.radSmall.TabIndex = 0;
             this.radSmall.Text = "Small";
             this.radSmall.UseVisualStyleBackColor = true;
+            this.radSmall.CheckedChanged += new System.EventHandler(this.radSmall_CheckedChanged);
             // 
             // lblQuant
             // 
@@ -262,7 +269,7 @@
         private System.Windows.Forms.RadioButton radSandwich;
         private System.Windows.Forms.RadioButton radFries;
         private System.Windows.Forms.RadioButton radSoft;
-        private System.Windows.Forms.RadioButton rad;
+        private System.Windows.Forms.RadioButton radWater;
         private System.Windows.Forms.GroupBox grpSize;
         private System.Windows.Forms.RadioButton radLarge;
         private System.Windows.Forms.RadioButton radMedium;

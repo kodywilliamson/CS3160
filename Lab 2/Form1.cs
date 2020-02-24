@@ -52,8 +52,78 @@ namespace Lab_2
             }
             public decimal Cost
             {
-
+                get { return (itemCost[Item, Size] * Quantity); }
             }
+            public override string ToString()
+            {
+                return String.Format($"{Quantity} {Size} {Item} {Cost}", format);
+            }
+        }
+        private void radWater_CheckedChanged(object sender, EventArgs e)
+        {
+            radSmall.Enabled = true;
+            radMedium.Enabled = false;
+            radLarge.Enabled = false;
+            radSmall.Checked = true;
+            cmbQuant.Enabled = true;
+            btnOrder.Enabled = true;
+            formItem = 3;
+            formSize = 0;
+            this.cmbQuant.SelectedIndex = 0;
+        }
+        private void enableSizes()
+        {
+            radSmall.Enabled = true;
+            radMedium.Enabled = true;
+            radLarge.Enabled = true;
+            radSmall.Checked = false;
+            radMedium.Checked = false;
+            radLarge.Enabled = false;
+        }
+
+        private void radSandwich_CheckedChanged(object sender, EventArgs e)
+        {
+            enableSizes();
+            cmbQuant.Enabled = false;
+            btnOrder.Enabled = false;
+            formItem = 0;
+        }
+
+        private void radFries_CheckedChanged(object sender, EventArgs e)
+        {
+            enableSizes();
+            cmbQuant.Enabled = false;
+            btnOrder.Enabled = false;
+            formItem = 1;
+        }
+
+        private void radSoft_CheckedChanged(object sender, EventArgs e)
+        {
+            enableSizes();
+            cmbQuant.Enabled = false;
+            btnOrder.Enabled = false;
+            formItem = 2;
+        }
+
+        private void radSmall_CheckedChanged(object sender, EventArgs e)
+        {
+            formSize = 0;
+            cmbQuant.Enabled = true;
+            btnOrder.Enabled = true;
+        }
+
+        private void radMedium_CheckedChanged(object sender, EventArgs e)
+        {
+            formSize = 1;
+            cmbQuant.Enabled = true;
+            btnOrder.Enabled = true;
+        }
+
+        private void radLarge_CheckedChanged(object sender, EventArgs e)
+        {
+            formSize = 2;
+            cmbQuant.Enabled = true;
+            btnOrder.Enabled = true;
         }
     }
 }
