@@ -211,18 +211,18 @@
             this.lstOrder.Font = new System.Drawing.Font("Courier New", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstOrder.FormattingEnabled = true;
             this.lstOrder.ItemHeight = 20;
-            this.lstOrder.Location = new System.Drawing.Point(50, 206);
+            this.lstOrder.Location = new System.Drawing.Point(50, 187);
             this.lstOrder.Name = "lstOrder";
-            this.lstOrder.Size = new System.Drawing.Size(604, 164);
+            this.lstOrder.Size = new System.Drawing.Size(604, 124);
             this.lstOrder.TabIndex = 11;
             this.lstOrder.SelectedIndexChanged += new System.EventHandler(this.lstOrder_SelectedIndexChanged);
             // 
             // btnOrder
             // 
             this.btnOrder.Enabled = false;
-            this.btnOrder.Location = new System.Drawing.Point(704, 32);
+            this.btnOrder.Location = new System.Drawing.Point(200, 316);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(259, 112);
+            this.btnOrder.Size = new System.Drawing.Size(146, 44);
             this.btnOrder.TabIndex = 12;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = true;
@@ -231,9 +231,9 @@
             // btnDelete
             // 
             this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(704, 206);
+            this.btnDelete.Location = new System.Drawing.Point(379, 316);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(259, 114);
+            this.btnDelete.Size = new System.Drawing.Size(147, 44);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -243,7 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 562);
+            this.ClientSize = new System.Drawing.Size(705, 384);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.lstOrder);

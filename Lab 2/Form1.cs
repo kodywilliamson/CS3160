@@ -64,7 +64,7 @@ namespace Lab_2
             }
             public override string ToString()
             {
-                return String.Format($"{Quantity.ToString()} {Size} {Item} {Cost}", format);
+                return String.Format(format, Quantity.ToString(), itemSize[Size], itemStr[Item], Cost);
             }
         }
         private void radWater_CheckedChanged(object sender, EventArgs e)
@@ -118,6 +118,7 @@ namespace Lab_2
             formSize = 0;
             cmbQuant.Enabled = true;
             btnOrder.Enabled = true;
+            this.cmbQuant.SelectedIndex = 0;
         }
 
         private void radMedium_CheckedChanged(object sender, EventArgs e)
@@ -125,6 +126,7 @@ namespace Lab_2
             formSize = 1;
             cmbQuant.Enabled = true;
             btnOrder.Enabled = true;
+            this.cmbQuant.SelectedIndex = 0;
         }
 
         private void radLarge_CheckedChanged(object sender, EventArgs e)
@@ -132,6 +134,7 @@ namespace Lab_2
             formSize = 2;
             cmbQuant.Enabled = true;
             btnOrder.Enabled = true;
+            this.cmbQuant.SelectedIndex = 0;
         }
 
         private void lstOrder_SelectedIndexChanged(object sender, EventArgs e)
@@ -141,7 +144,7 @@ namespace Lab_2
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
-            PurchasedItem order = new PurchasedItem(formItem, formSize, cmbQuant.SelectedIndex);
+            PurchasedItem order = new PurchasedItem(formItem, formSize, cmbQuant.SelectedIndex+1);
             formCharge += order.Cost;
             lblTotal.Text = formCharge.ToString("C");
             lstOrder.Items.Add(order.ToString());
@@ -149,7 +152,9 @@ namespace Lab_2
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
+            //string hold = lstOrder.SelectedIndex.ToString();
+            lstOrder.Items.RemoveAt(lstOrder.SelectedIndex);
+            //PurchasedItem order = new PurchasedItem(Convert.ToInt32(hold[1]), Convert.)
         }
     }
 }
