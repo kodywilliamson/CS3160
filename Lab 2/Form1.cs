@@ -14,7 +14,7 @@ namespace Lab_2
     {
         private int formItem;
         private int formSize;
-        private decimal formCharge;
+        private decimal formCharge = 0;
         
         public Form1()
         {
@@ -33,12 +33,20 @@ namespace Lab_2
 
         public class PurchasedItem
         {
+            private string[] itemStr = { "Sandwich", "Fries", "Soft Drink", "Water" };
+            private string[] itemSize = { "Small", "Medium", "Large" };
             private int Item;
             private int Size;
             private int Quantity;
             private static decimal[,] itemCost;
             private static string format;
 
+            public PurchasedItem(int i, int s, int q)
+            {
+                Item = i;
+                Size = s;
+                Quantity = q;
+            }
             static PurchasedItem()
             {
                 format = "{0,2} {1,1} {2,-15} {3,10:C}";
@@ -56,7 +64,7 @@ namespace Lab_2
             }
             public override string ToString()
             {
-                return String.Format($"{Quantity} {Size} {Item} {Cost}", format);
+                return String.Format($"{Quantity.ToString()} {Size} {Item} {Cost}", format);
             }
         }
         private void radWater_CheckedChanged(object sender, EventArgs e)
@@ -78,7 +86,7 @@ namespace Lab_2
             radLarge.Enabled = true;
             radSmall.Checked = false;
             radMedium.Checked = false;
-            radLarge.Enabled = false;
+            radLarge.Checked = false;
         }
 
         private void radSandwich_CheckedChanged(object sender, EventArgs e)
@@ -124,6 +132,24 @@ namespace Lab_2
             formSize = 2;
             cmbQuant.Enabled = true;
             btnOrder.Enabled = true;
+        }
+
+        private void lstOrder_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnDelete.Enabled = true;
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            PurchasedItem order = new PurchasedItem(formItem, formSize, cmbQuant.SelectedIndex);
+            formCharge += order.Cost;
+            lblTotal.Text = formCharge.ToString("C");
+            lstOrder.Items.Add(order.ToString());
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

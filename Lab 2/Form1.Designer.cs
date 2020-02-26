@@ -215,6 +215,7 @@
             this.lstOrder.Name = "lstOrder";
             this.lstOrder.Size = new System.Drawing.Size(604, 164);
             this.lstOrder.TabIndex = 11;
+            this.lstOrder.SelectedIndexChanged += new System.EventHandler(this.lstOrder_SelectedIndexChanged);
             // 
             // btnOrder
             // 
@@ -225,6 +226,7 @@
             this.btnOrder.TabIndex = 12;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnDelete
             // 
@@ -235,6 +237,7 @@
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form1
             // 
