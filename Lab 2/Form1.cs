@@ -34,7 +34,7 @@ namespace Lab_2
         public class PurchasedItem
         {
             private string[] itemStr = { "Sandwich", "Fries", "Soft Drink", "Water" };
-            private string[] itemSize = { "Small", "Medium", "Large" };
+            private string[] itemSize = { "S", "M", "L" };
             private int Item;
             private int Size;
             private int Quantity;
@@ -152,9 +152,22 @@ namespace Lab_2
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            //string hold = lstOrder.SelectedIndex.ToString();
+            int length = 0;
+            string chargeChange = "";
+            string hold = lstOrder.SelectedItem.ToString();
             lstOrder.Items.RemoveAt(lstOrder.SelectedIndex);
-            //PurchasedItem order = new PurchasedItem(Convert.ToInt32(hold[1]), Convert.)
+            hold = hold.Substring(20);
+            length = hold.Length;
+            for (int i = 0; i < length; i++)
+            {
+                if (Char.IsDigit(hold[i]) || hold[i] == '.')
+                {
+                    chargeChange += hold[i];
+                } 
+            }
+            formCharge -= Convert.ToDecimal(chargeChange);
+            lblTotal.Text = formCharge.ToString();
+            btnDelete.Enabled = false;
         }
     }
 }
