@@ -206,7 +206,7 @@ namespace Lab_2
                 } 
             }
             formCharge -= Convert.ToDecimal(chargeChange);
-            lblTotal.Text = formCharge.ToString();
+            lblTotal.Text = formCharge.ToString("C");
             btnDelete.Enabled = false;
         }
     }
