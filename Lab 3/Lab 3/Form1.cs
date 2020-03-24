@@ -29,6 +29,16 @@ namespace Lab_3
             private string eventTitle { get; }
             public Event(int Year, int Month, int Day, int startHour, int startMin, int endHour, int endMin, string Title)
             {
+                if (Title == "")
+                    throw new System.ArgumentException("Event Title cannot be empty.");
+                if (startHour < endHour)
+                {
+                    if (startMin > endMin)
+                        throw new System.ArgumentException("Event ends before it starts.");
+                }
+                else
+                    throw new System.ArgumentException("Event ends before it starts.");
+
                 startTime = new DateTime(Year, Month, Day, startHour, startMin, 0);
                 endTime = new DateTime(Year, Month, Day, endHour, endMin, 0);
                 eventTitle = Title;
