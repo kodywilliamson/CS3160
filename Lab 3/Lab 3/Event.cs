@@ -42,9 +42,17 @@ namespace Lab_3
         public override string ToString()
         {
             //Different formatting needed to add leading zeros for times before noon
-            if (startTime.Hour < 10)
+            if (startTime.Hour < 10 && startTime.Minute > 9)
             {
                 return ($"{startTime.Year}-{startTime.Month}-{startTime.Day} 0{startTime.Hour}:{startTime.Minute}");
+            }
+            else if (startTime.Minute == 0 && startTime.Hour < 10)
+            {
+                return ($"{startTime.Year}-{startTime.Month}-{startTime.Day} 0{startTime.Hour}:00");
+            }
+            else if (startTime.Minute == 0)
+            {
+                return ($"{startTime.Year}-{startTime.Month}-{startTime.Day} {startTime.Hour}:00");
             }
             else if (startTime.Hour < 10 && startTime.Minute < 10)
             {
