@@ -17,7 +17,7 @@ namespace Lab_3
                 throw new System.ArgumentException("Event Title cannot be empty.");
             if (startHour < endHour)
             {
-                if (startMin > endMin)
+                if ((startMin > endMin) && (startHour == endHour))
                     throw new System.ArgumentException("Event ends before it starts.");
             }
             else
