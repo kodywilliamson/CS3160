@@ -1,4 +1,9 @@
-﻿using System;
+﻿//File: Form2.cs
+//Authors: Caudill, Connor; Williamson, Kody
+//Class: CS 3160
+//Instrcutor: Jadwiga Carlson
+//Date: 23 March 2020
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +17,7 @@ namespace Lab_3
 {
     public partial class Form2 : Form
     {
+        //From varibales that will be passed back to Form1
         string[] values = new string[8];
         int temp = 0;
 
@@ -69,6 +75,7 @@ namespace Lab_3
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            //Seeting the max and min dates as the last day of the current year, and today, respectively.
             DateTime max = new DateTime(DateTime.Today.Year, 12, 31);
             monthCalendar1.MinDate = DateTime.Today;
             monthCalendar1.MaxDate = max;
@@ -79,11 +86,13 @@ namespace Lab_3
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            //Adding all the encessary data to an array so it can easily be accessed by Form1
             values[0] = monthCalendar1.SelectionStart.Year.ToString();
             values[1] = monthCalendar1.SelectionStart.Month.ToString();
             values[2] = monthCalendar1.SelectionStart.Day.ToString();
             if (cmbStartAM.Text == "PM")
             {
+                //PM times need to have their difference from AM accounted for here
                 temp = Int32.Parse(cmbStartHour.Text) + 12;
                 values[3] = temp.ToString();
             }
@@ -103,6 +112,11 @@ namespace Lab_3
             }
             values[6] = cmbEndMin.Text;
             values[7] = txtDesc.Text;
+        }
+
+        private void cmbStartHour_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
