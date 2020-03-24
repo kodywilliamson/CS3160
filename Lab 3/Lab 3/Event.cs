@@ -29,7 +29,22 @@ namespace Lab_3
         }
         public override string ToString()
         {
-            return ($"{startTime.Year}-{startTime.Month}-{startTime.Day} {startTime.Hour}:{startTime.Minute}");
+            if (startTime.Hour < 10)
+            {
+                return ($"{startTime.Year}-{startTime.Month}-{startTime.Day} 0{startTime.Hour}:{startTime.Minute}");
+            }
+            else if (startTime.Hour < 10 && startTime.Minute < 10)
+            {
+                return ($"{startTime.Year}-{startTime.Month}-{startTime.Day} 0{startTime.Hour}:0{startTime.Minute}");
+            }
+            else if (startTime.Minute < 10)
+            {
+                return ($"{startTime.Year}-{startTime.Month}-{startTime.Day} {startTime.Hour}:0{startTime.Minute}");
+            }
+            else
+            {
+                return ($"{startTime.Year}-{startTime.Month}-{startTime.Day} {startTime.Hour}:{startTime.Minute}");
+            }
         }
         public override bool Equals(object obj)
         {

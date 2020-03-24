@@ -64,7 +64,7 @@ namespace Lab_3
                 }
             }
             Event appt = new Event(Int32.Parse(value[0]), Int32.Parse(value[1]), Int32.Parse(value[2]), Int32.Parse(value[3]), Int32.Parse(value[4]), Int32.Parse(value[5]), Int32.Parse(value[6]), value[7]);
-            lstEvents.Items.Add(appt.ToString());
+            lstEvents.Items.Add(appt);
         }
     }
 }
