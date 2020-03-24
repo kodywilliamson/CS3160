@@ -45,16 +45,18 @@
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(13, 13);
+            this.monthCalendar1.Location = new System.Drawing.Point(26, 25);
+            this.monthCalendar1.Margin = new System.Windows.Forms.Padding(18, 17, 18, 17);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 0;
             // 
             // lblStart
             // 
             this.lblStart.AutoSize = true;
-            this.lblStart.Location = new System.Drawing.Point(316, 13);
+            this.lblStart.Location = new System.Drawing.Point(632, 25);
+            this.lblStart.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblStart.Name = "lblStart";
-            this.lblStart.Size = new System.Drawing.Size(73, 17);
+            this.lblStart.Size = new System.Drawing.Size(145, 32);
             this.lblStart.TabIndex = 1;
             this.lblStart.Text = "Start Time";
             this.lblStart.Click += new System.EventHandler(this.label1_Click);
@@ -76,9 +78,10 @@
             "10",
             "11",
             "12"});
-            this.cmbStartHour.Location = new System.Drawing.Point(319, 44);
+            this.cmbStartHour.Location = new System.Drawing.Point(638, 85);
+            this.cmbStartHour.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbStartHour.Name = "cmbStartHour";
-            this.cmbStartHour.Size = new System.Drawing.Size(121, 24);
+            this.cmbStartHour.Size = new System.Drawing.Size(238, 39);
             this.cmbStartHour.TabIndex = 2;
             // 
             // cmbStartMin
@@ -90,9 +93,10 @@
             "15",
             "30",
             "45"});
-            this.cmbStartMin.Location = new System.Drawing.Point(446, 44);
+            this.cmbStartMin.Location = new System.Drawing.Point(892, 85);
+            this.cmbStartMin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbStartMin.Name = "cmbStartMin";
-            this.cmbStartMin.Size = new System.Drawing.Size(86, 24);
+            this.cmbStartMin.Size = new System.Drawing.Size(168, 39);
             this.cmbStartMin.TabIndex = 3;
             // 
             // cmbStartAM
@@ -102,17 +106,19 @@
             this.cmbStartAM.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.cmbStartAM.Location = new System.Drawing.Point(538, 44);
+            this.cmbStartAM.Location = new System.Drawing.Point(1076, 85);
+            this.cmbStartAM.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbStartAM.Name = "cmbStartAM";
-            this.cmbStartAM.Size = new System.Drawing.Size(53, 24);
+            this.cmbStartAM.Size = new System.Drawing.Size(102, 39);
             this.cmbStartAM.TabIndex = 4;
             // 
             // lblEndTime
             // 
             this.lblEndTime.AutoSize = true;
-            this.lblEndTime.Location = new System.Drawing.Point(319, 109);
+            this.lblEndTime.Location = new System.Drawing.Point(638, 211);
+            this.lblEndTime.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblEndTime.Name = "lblEndTime";
-            this.lblEndTime.Size = new System.Drawing.Size(68, 17);
+            this.lblEndTime.Size = new System.Drawing.Size(136, 32);
             this.lblEndTime.TabIndex = 6;
             this.lblEndTime.Text = "End Time";
             // 
@@ -133,9 +139,10 @@
             "10",
             "11",
             "12"});
-            this.cmbEndHour.Location = new System.Drawing.Point(319, 141);
+            this.cmbEndHour.Location = new System.Drawing.Point(638, 273);
+            this.cmbEndHour.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbEndHour.Name = "cmbEndHour";
-            this.cmbEndHour.Size = new System.Drawing.Size(121, 24);
+            this.cmbEndHour.Size = new System.Drawing.Size(238, 39);
             this.cmbEndHour.TabIndex = 7;
             // 
             // cmbEndMin
@@ -147,9 +154,10 @@
             "15",
             "30",
             "45"});
-            this.cmbEndMin.Location = new System.Drawing.Point(447, 141);
+            this.cmbEndMin.Location = new System.Drawing.Point(894, 273);
+            this.cmbEndMin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbEndMin.Name = "cmbEndMin";
-            this.cmbEndMin.Size = new System.Drawing.Size(85, 24);
+            this.cmbEndMin.Size = new System.Drawing.Size(166, 39);
             this.cmbEndMin.TabIndex = 8;
             // 
             // cmbEndAM
@@ -159,50 +167,56 @@
             this.cmbEndAM.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.cmbEndAM.Location = new System.Drawing.Point(539, 141);
+            this.cmbEndAM.Location = new System.Drawing.Point(1078, 273);
+            this.cmbEndAM.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.cmbEndAM.Name = "cmbEndAM";
-            this.cmbEndAM.Size = new System.Drawing.Size(52, 24);
+            this.cmbEndAM.Size = new System.Drawing.Size(100, 39);
             this.cmbEndAM.TabIndex = 9;
             // 
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(13, 246);
+            this.lblDesc.Location = new System.Drawing.Point(26, 477);
+            this.lblDesc.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(119, 17);
+            this.lblDesc.Size = new System.Drawing.Size(238, 32);
             this.lblDesc.TabIndex = 10;
             this.lblDesc.Text = "Event Description";
             // 
             // txtDesc
             // 
-            this.txtDesc.Location = new System.Drawing.Point(13, 267);
+            this.txtDesc.Location = new System.Drawing.Point(26, 517);
+            this.txtDesc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(578, 22);
+            this.txtDesc.Size = new System.Drawing.Size(1152, 38);
             this.txtDesc.TabIndex = 11;
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(508, 309);
+            this.btnCancel.Location = new System.Drawing.Point(1016, 599);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(83, 28);
+            this.btnCancel.Size = new System.Drawing.Size(166, 54);
             this.btnCancel.TabIndex = 12;
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(16, 309);
+            this.btnAdd.Location = new System.Drawing.Point(32, 599);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(90, 28);
+            this.btnAdd.Size = new System.Drawing.Size(180, 54);
             this.btnAdd.TabIndex = 14;
             this.btnAdd.Text = "&Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 362);
+            this.ClientSize = new System.Drawing.Size(1236, 701);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtDesc);
@@ -217,8 +231,10 @@
             this.Controls.Add(this.lblStart);
             this.Controls.Add(this.monthCalendar1);
             this.Enabled = false;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form2";
             this.Text = "New Event";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

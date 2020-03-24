@@ -45,10 +45,10 @@
             // lstEvents
             // 
             this.lstEvents.FormattingEnabled = true;
-            this.lstEvents.ItemHeight = 20;
+            this.lstEvents.ItemHeight = 39;
             this.lstEvents.Location = new System.Drawing.Point(34, 54);
             this.lstEvents.Name = "lstEvents";
-            this.lstEvents.Size = new System.Drawing.Size(243, 264);
+            this.lstEvents.Size = new System.Drawing.Size(243, 238);
             this.lstEvents.Sorted = true;
             this.lstEvents.TabIndex = 0;
             this.lstEvents.SelectedIndexChanged += new System.EventHandler(this.lstEvents_SelectedIndexChanged);
@@ -58,7 +58,7 @@
             this.lblEvents.AutoSize = true;
             this.lblEvents.Location = new System.Drawing.Point(30, 31);
             this.lblEvents.Name = "lblEvents";
-            this.lblEvents.Size = new System.Drawing.Size(60, 20);
+            this.lblEvents.Size = new System.Drawing.Size(121, 39);
             this.lblEvents.TabIndex = 1;
             this.lblEvents.Text = "&Events";
             // 
@@ -67,7 +67,7 @@
             this.txtDetail.Enabled = false;
             this.txtDetail.Location = new System.Drawing.Point(344, 54);
             this.txtDetail.Name = "txtDetail";
-            this.txtDetail.Size = new System.Drawing.Size(228, 27);
+            this.txtDetail.Size = new System.Drawing.Size(228, 46);
             this.txtDetail.TabIndex = 2;
             // 
             // lblDetail
@@ -75,7 +75,7 @@
             this.lblDetail.AutoSize = true;
             this.lblDetail.Location = new System.Drawing.Point(344, 31);
             this.lblDetail.Name = "lblDetail";
-            this.lblDetail.Size = new System.Drawing.Size(100, 20);
+            this.lblDetail.Size = new System.Drawing.Size(201, 39);
             this.lblDetail.TabIndex = 3;
             this.lblDetail.Text = "Event Detail";
             // 
@@ -84,7 +84,7 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Location = new System.Drawing.Point(344, 101);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(50, 20);
+            this.lblDate.Size = new System.Drawing.Size(98, 39);
             this.lblDate.TabIndex = 4;
             this.lblDate.Text = "Date:";
             // 
@@ -93,7 +93,7 @@
             this.txtDate.Enabled = false;
             this.txtDate.Location = new System.Drawing.Point(401, 98);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(171, 27);
+            this.txtDate.Size = new System.Drawing.Size(171, 46);
             this.txtDate.TabIndex = 5;
             // 
             // lblDay
@@ -101,7 +101,7 @@
             this.lblDay.AutoSize = true;
             this.lblDay.Location = new System.Drawing.Point(344, 142);
             this.lblDay.Name = "lblDay";
-            this.lblDay.Size = new System.Drawing.Size(49, 20);
+            this.lblDay.Size = new System.Drawing.Size(96, 39);
             this.lblDay.TabIndex = 6;
             this.lblDay.Text = "Day: ";
             // 
@@ -110,7 +110,7 @@
             this.txtDay.Enabled = false;
             this.txtDay.Location = new System.Drawing.Point(401, 142);
             this.txtDay.Name = "txtDay";
-            this.txtDay.Size = new System.Drawing.Size(171, 27);
+            this.txtDay.Size = new System.Drawing.Size(171, 46);
             this.txtDay.TabIndex = 7;
             // 
             // lblTime
@@ -118,7 +118,7 @@
             this.lblTime.AutoSize = true;
             this.lblTime.Location = new System.Drawing.Point(344, 185);
             this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(51, 20);
+            this.lblTime.Size = new System.Drawing.Size(102, 39);
             this.lblTime.TabIndex = 8;
             this.lblTime.Text = "Time:";
             // 
@@ -127,7 +127,7 @@
             this.txtTime.Enabled = false;
             this.txtTime.Location = new System.Drawing.Point(401, 185);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(171, 27);
+            this.txtTime.Size = new System.Drawing.Size(171, 46);
             this.txtTime.TabIndex = 9;
             // 
             // btnNew
@@ -138,6 +138,7 @@
             this.btnNew.TabIndex = 10;
             this.btnNew.Text = "&New";
             this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnDelete
             // 
@@ -151,7 +152,7 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(20F, 39F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 333);
             this.Controls.Add(this.btnDelete);

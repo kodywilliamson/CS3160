@@ -12,6 +12,7 @@ namespace Lab_3
 {
     public partial class Form1 : Form
     {
+        string[] value = new string[8];
         public Form1()
         {
             InitializeComponent();
@@ -42,6 +43,28 @@ namespace Lab_3
             txtDate.Text = displayer.startTime.ToShortDateString();
             txtDay.Text = $"{displayer.startTime.DayOfWeek}";
             txtTime.Text = $"{displayer.startTime.TimeOfDay} to {displayer.endTime.TimeOfDay}";
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            using (Form2 form2 = new Form2())
+            {
+                form2.Enabled=true;
+                if (form2.ShowDialog() == DialogResult.OK)
+                {
+                    value[0] = form2.Year;
+                    value[1] = form2.Month;
+                    value[2] = form2.Day;
+                    value[3] = form2.StHour;
+                    value[4] = form2.StMin;
+                    value[5] = form2.EndHour;
+                    value[6] = form2.EndMin;
+                    value[7] = form2.Desc;
+
+                }
+            }
+            Event appt = new Event(Int32.Parse(value[0]), Int32.Parse(value[1]), Int32.Parse(value[2]), Int32.Parse(value[3]), Int32.Parse(value[4]), Int32.Parse(value[5]), Int32.Parse(value[6]), value[7]);
+            lstEvents.Items.Add(appt.ToString());
         }
     }
 }
