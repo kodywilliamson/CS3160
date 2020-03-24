@@ -33,6 +33,32 @@ namespace Lab_3
                 endTime = new DateTime(Year, Month, Day, endHour, endMin, 0);
                 eventTitle = Title;
             }
+            public override string ToString()
+            {
+                return ($"{startTime.Year}-{startTime.Month}-{startTime.Day} {startTime.Hour}:{startTime.Minute}");
+            }
+            public override bool Equals(object obj)
+            {
+                var other = obj as Event;
+
+                if (other == null)
+                    return false;
+                if (other.startTime != this.startTime)
+                    return false;
+                else if (other.endTime != this.endTime)
+                    return false;
+                else if (other.eventTitle != this.eventTitle)
+                    return false;
+                return true;
+
+            }
+            public override int GetHashCode()
+            {
+                int hashCode = 12345;
+                int holder = 0;
+                holder = startTime.Year + startTime.Month + startTime.Day;
+                return holder * hashCode;
+            }
         }
     }
 }

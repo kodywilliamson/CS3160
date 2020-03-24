@@ -33,7 +33,6 @@
             this.cmbStartHour = new System.Windows.Forms.ComboBox();
             this.cmbStartMin = new System.Windows.Forms.ComboBox();
             this.cmbStartAM = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblEndTime = new System.Windows.Forms.Label();
             this.cmbEndHour = new System.Windows.Forms.ComboBox();
             this.cmbEndMin = new System.Windows.Forms.ComboBox();
@@ -41,7 +40,6 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.txtDesc = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -108,15 +106,6 @@
             this.cmbStartAM.Name = "cmbStartAM";
             this.cmbStartAM.Size = new System.Drawing.Size(53, 24);
             this.cmbStartAM.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
             // 
             // lblEndTime
             // 
@@ -200,15 +189,6 @@
             this.btnCancel.Text = "&Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(16, 309);
@@ -224,7 +204,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(618, 362);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.lblDesc);
@@ -232,7 +211,6 @@
             this.Controls.Add(this.cmbEndMin);
             this.Controls.Add(this.cmbEndHour);
             this.Controls.Add(this.lblEndTime);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbStartAM);
             this.Controls.Add(this.cmbStartMin);
             this.Controls.Add(this.cmbStartHour);
@@ -252,7 +230,6 @@
         private System.Windows.Forms.ComboBox cmbStartHour;
         private System.Windows.Forms.ComboBox cmbStartMin;
         private System.Windows.Forms.ComboBox cmbStartAM;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEndTime;
         private System.Windows.Forms.ComboBox cmbEndHour;
         private System.Windows.Forms.ComboBox cmbEndMin;
@@ -260,7 +237,6 @@
         private System.Windows.Forms.Label lblDesc;
         private System.Windows.Forms.TextBox txtDesc;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAdd;
     }
 }
