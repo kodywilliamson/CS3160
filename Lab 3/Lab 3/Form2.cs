@@ -92,7 +92,7 @@ namespace Lab_3
                 values[3] = cmbStartHour.Text;
             }
             values[4] = cmbStartMin.Text;
-            if (cmbStartAM.Text == "PM")
+            if (cmbEndAM.Text == "PM")
             {
                 temp = Int32.Parse(cmbEndHour.Text) + 12;
                 values[5] = temp.ToString();
