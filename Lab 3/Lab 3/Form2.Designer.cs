@@ -216,6 +216,7 @@
             this.Controls.Add(this.cmbStartHour);
             this.Controls.Add(this.lblStart);
             this.Controls.Add(this.monthCalendar1);
+            this.Enabled = false;
             this.Name = "Form2";
             this.Text = "New Event";
             this.ResumeLayout(false);

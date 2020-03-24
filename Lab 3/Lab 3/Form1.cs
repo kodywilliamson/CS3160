@@ -70,5 +70,21 @@ namespace Lab_3
                 return holder * hashCode;
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            lstEvents.Items.RemoveAt(lstEvents.SelectedIndex);
+            btnDelete.Enabled = false;
+            txtDetail.Text = "";
+            txtDate.Text = "";
+            txtDay.Text = "";
+            txtTime.Text = "";
+        }
+
+        private void lstEvents_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnDelete.Enabled = true;
+            txtDetail.Text = lstEvents.SelectedItem.
+        }
     }
 }

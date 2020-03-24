@@ -33,7 +33,7 @@
             this.txtDetail = new System.Windows.Forms.TextBox();
             this.lblDetail = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.lblDay = new System.Windows.Forms.Label();
             this.txtDay = new System.Windows.Forms.TextBox();
             this.lblTime = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@
             this.lstEvents.Size = new System.Drawing.Size(243, 264);
             this.lstEvents.Sorted = true;
             this.lstEvents.TabIndex = 0;
+            this.lstEvents.SelectedIndexChanged += new System.EventHandler(this.lstEvents_SelectedIndexChanged);
             // 
             // lblEvents
             // 
@@ -63,6 +64,7 @@
             // 
             // txtDetail
             // 
+            this.txtDetail.Enabled = false;
             this.txtDetail.Location = new System.Drawing.Point(344, 54);
             this.txtDetail.Name = "txtDetail";
             this.txtDetail.Size = new System.Drawing.Size(228, 27);
@@ -86,12 +88,13 @@
             this.lblDate.TabIndex = 4;
             this.lblDate.Text = "Date:";
             // 
-            // textBox1
+            // txtDate
             // 
-            this.textBox1.Location = new System.Drawing.Point(401, 98);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 27);
-            this.textBox1.TabIndex = 5;
+            this.txtDate.Enabled = false;
+            this.txtDate.Location = new System.Drawing.Point(401, 98);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(171, 27);
+            this.txtDate.TabIndex = 5;
             // 
             // lblDay
             // 
@@ -104,6 +107,7 @@
             // 
             // txtDay
             // 
+            this.txtDay.Enabled = false;
             this.txtDay.Location = new System.Drawing.Point(401, 142);
             this.txtDay.Name = "txtDay";
             this.txtDay.Size = new System.Drawing.Size(171, 27);
@@ -120,6 +124,7 @@
             // 
             // txtTime
             // 
+            this.txtTime.Enabled = false;
             this.txtTime.Location = new System.Drawing.Point(401, 185);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(171, 27);
@@ -142,6 +147,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "&Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form1
             // 
@@ -154,7 +160,7 @@
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.txtDay);
             this.Controls.Add(this.lblDay);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblDetail);
             this.Controls.Add(this.txtDetail);
@@ -177,7 +183,7 @@
         private System.Windows.Forms.TextBox txtDetail;
         private System.Windows.Forms.Label lblDetail;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDate;
         private System.Windows.Forms.Label lblDay;
         private System.Windows.Forms.TextBox txtDay;
         private System.Windows.Forms.Label lblTime;
