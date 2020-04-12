@@ -42,10 +42,24 @@ namespace Lab_4
         //}
         public string nextMove(int x, int y)
         {
-            if (isFilled(x, y))
+            Point test = new Point(x, y);
+            for (int i = 0; i < 3; i++)
             {
-                return "Square in use, try again";
+                for(int j = 0; j < 3; j++)
+                {
+                    Rectangle myR = new Rectangle(coord[i, j].x1, coord[i, j].y1, (coord[i, j].x2- coord[i, j].x1), (coord[i, j].y2- coord[i, j].y1));
+                    if (myR.Contains(test))
+                    {
+                        x = i;
+                        y = j;
+                    }
+                }
+                return x.ToString();
             }
+            //if (isFilled(x, y))
+            //{
+            //    return "Square in use, try again";
+            //}
             Moves++;
             whoTurn = Moves % 2;
             if (whoTurn == 0)
@@ -67,10 +81,10 @@ namespace Lab_4
         {
 
         }
-        private bool isFilled(int x, int y)
-        {
+       // private bool isFilled(int x, int y)
+        //{
 
-        }
+        //}
     }
     public abstract class Shape
     {

@@ -47,7 +47,7 @@ namespace Lab_4
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
-            Point p = Control.MousePosition;
+            Point p = this.PointToClient(Cursor.Position);
             lblTurn.Text = nGame.nextMove(p.X, p.Y);
         }
     }
