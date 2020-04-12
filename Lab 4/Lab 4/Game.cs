@@ -9,15 +9,28 @@ namespace Lab_4
 {
     public class Game
     {
-        private int numTurn;
+        Graphics g;
+        private int whoTurn;
         private Shape[,] grid;
         private Coordinates[,] coord;
 
+        public int Moves { set; get; }
         public bool isGameOver()
         {
-            
+            if (Moves == 9)
+                return true;
+            else
+                return false;
         }
         private bool isWin()
+        {
+
+        }
+        public string nextMove(int x, int y)
+        {
+            if (whoTurn )
+        }
+        private void resetGrid()
         {
 
         }

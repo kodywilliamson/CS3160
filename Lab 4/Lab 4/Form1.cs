@@ -12,6 +12,7 @@ namespace Lab_4
 {
     public partial class Form1 : Form
     {
+        Game nGame = new Game();
         public Form1()
         {
             InitializeComponent();
@@ -37,6 +38,17 @@ namespace Lab_4
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            Point p = Control.MousePosition;
+            nGame.nextMove(p.X, p.Y);
         }
     }
 }
