@@ -37,26 +37,29 @@
             // 
             // mnuTic
             // 
+            this.mnuTic.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.mnuTic.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuTic.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.resetToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.mnuTic.Location = new System.Drawing.Point(0, 0);
             this.mnuTic.Name = "mnuTic";
-            this.mnuTic.Size = new System.Drawing.Size(347, 28);
+            this.mnuTic.Padding = new System.Windows.Forms.Padding(12, 4, 0, 4);
+            this.mnuTic.Size = new System.Drawing.Size(694, 56);
             this.mnuTic.TabIndex = 0;
             this.mnuTic.Text = "menuStrip1";
             // 
             // resetToolStripMenuItem
             // 
             this.resetToolStripMenuItem.Name = "resetToolStripMenuItem";
-            this.resetToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.resetToolStripMenuItem.Size = new System.Drawing.Size(114, 48);
             this.resetToolStripMenuItem.Text = "Reset";
+            this.resetToolStripMenuItem.Click += new System.EventHandler(this.resetToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(88, 48);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -64,21 +67,23 @@
             // 
             this.lblTurn.AutoSize = true;
             this.lblTurn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTurn.Location = new System.Drawing.Point(122, 50);
+            this.lblTurn.Location = new System.Drawing.Point(244, 97);
+            this.lblTurn.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblTurn.Name = "lblTurn";
-            this.lblTurn.Size = new System.Drawing.Size(96, 25);
+            this.lblTurn.Size = new System.Drawing.Size(180, 46);
             this.lblTurn.TabIndex = 1;
             this.lblTurn.Text = "O\'s Turn";
             this.lblTurn.Click += new System.EventHandler(this.lblTurn_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(347, 344);
+            this.ClientSize = new System.Drawing.Size(694, 666);
             this.Controls.Add(this.lblTurn);
             this.Controls.Add(this.mnuTic);
             this.MainMenuStrip = this.mnuTic;
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

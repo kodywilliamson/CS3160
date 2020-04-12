@@ -50,5 +50,10 @@ namespace Lab_4
             Point p = this.PointToClient(Cursor.Position);
             lblTurn.Text = nGame.nextMove(p.X, p.Y);
         }
+
+        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

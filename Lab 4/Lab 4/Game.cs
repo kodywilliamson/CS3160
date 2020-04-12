@@ -13,6 +13,7 @@ namespace Lab_4
         private int whoTurn;
         private Shape[,] grid;
         private Coordinates[,] coord;
+        private char[,] board = new char[3, 3];
 
         public int Moves { set; get; }
         public Game()
@@ -36,10 +37,45 @@ namespace Lab_4
             else
                 return false;
         }
-        //private bool isWin()
-        //{
-
-        //}
+        private bool isWin(char lstInput)
+        {
+            if (board[0, 0] == lstInput && board[0, 1] == lstInput && board[0, 2] == lstInput)
+            {
+                return true;
+            }
+            if (board[1, 0] == lstInput && board[1, 1] == lstInput && board[1, 2] == lstInput)
+            {
+                return true;
+            }
+            if (board[2, 0] == lstInput && board[2, 1] == lstInput && board[2, 2] == lstInput)
+            {
+                return true;
+            }
+            if (board[0, 0] == lstInput && board[1, 0] == lstInput && board[2, 0] == lstInput)
+            {
+                return true;
+            }
+            if (board[0, 1] == lstInput && board[1, 1] == lstInput && board[2, 1] == lstInput)
+            {
+                return true;
+            }
+            if (board[0, 2] == lstInput && board[1, 2] == lstInput && board[2, 2] == lstInput)
+            {
+                return true;
+            }
+            if (board[0, 0] == lstInput && board[1, 1] == lstInput && board[2, 2] == lstInput)
+            {
+                return true;
+            }
+            if (board[0, 2] == lstInput && board[1, 1] == lstInput && board[2, 0] == lstInput)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public string nextMove(int x, int y)
         {
             Point test = new Point(x, y);
@@ -79,7 +115,13 @@ namespace Lab_4
         }
         private void resetGrid()
         {
-
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    board[i, j] = '-';
+                }
+            }
         }
        // private bool isFilled(int x, int y)
         //{
