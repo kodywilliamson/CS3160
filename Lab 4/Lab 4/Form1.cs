@@ -33,5 +33,10 @@ namespace Lab_4
             e.Graphics.DrawLine(Pens.Black, 40, 130, 220, 130);
             e.Graphics.DrawLine(Pens.Black, 40, 190, 220, 190);
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
