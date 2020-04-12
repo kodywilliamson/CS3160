@@ -43,23 +43,22 @@ namespace Lab_4
         public string nextMove(int x, int y)
         {
             Point test = new Point(x, y);
-            for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++)
             {
-                for(int j = 0; j < 3; j++)
+                for (int i = 0; i < 3; i++)
                 {
-                    Rectangle myR = new Rectangle(coord[i, j].x1, coord[i, j].y1, (coord[i, j].x2- coord[i, j].x1), (coord[i, j].y2- coord[i, j].y1));
+                    Rectangle myR = new Rectangle(coord[j, i].x1, coord[j, i].y1, Math.Abs(coord[j, i].x2 - coord[j, i].x1), Math.Abs(coord[j, i].y2 - coord[j, i].y1));
                     if (myR.Contains(test))
                     {
                         x = i;
                         y = j;
                     }
                 }
-                return x.ToString();
             }
-            //if (isFilled(x, y))
-            //{
-            //    return "Square in use, try again";
-            //}
+            if (isFilled(x, y))
+            {
+                return "Square in use, try again";
+            }
             Moves++;
             whoTurn = Moves % 2;
             if (whoTurn == 0)
@@ -81,10 +80,12 @@ namespace Lab_4
         {
 
         }
-       // private bool isFilled(int x, int y)
-        //{
-
-        //}
+        private bool isFilled(int x, int y)
+        {
+            if (grid[x, y] is Shape)
+                return true;
+            return false;
+        }
     }
     public abstract class Shape
     {
