@@ -8,6 +8,8 @@ namespace Lab_5
 {
     class Account
     {
-
+        protected string owner;
+        protected int ID;
+        protected decimal balance;
     }
 }
