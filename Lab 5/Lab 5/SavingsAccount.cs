@@ -10,8 +10,9 @@ namespace Lab_5
     class SavingsAccount : Account, IAccount
     {
         public decimal interestRate;
-        public SavingsAccount(decimal amt, decimal interest)
+        public SavingsAccount(string name, decimal amt, decimal interest)
         {
+            this.owner = name;
             interestRate = interest;
             this.balance = amt;
         }

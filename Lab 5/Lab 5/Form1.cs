@@ -21,5 +21,22 @@ namespace Lab_5
         {
 
         }
+
+        private void btnInterest_Click(object sender, EventArgs e)
+        {
+            if(lstAcc.SelectedItem != SavingsAccount)
+            SavingsAccount addint = (SavingsAccount)lstAcc.SelectedItem;
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            InterstellarBank bank = new InterstellarBank();
+            bank.AddChecking("Smith", 1000, 1.0M);
+            bank.AddSavings("Smith", 23456, 0.03M);
+            bank.AddChecking("Jones", 234, 1.0M);
+            bank.AddSavings("Jones", 10000, 0.02M);
+            bank.AddChecking("Doe", 124, 1.0M);
+        }
     }
 }

@@ -10,8 +10,9 @@ namespace Lab_5
     class CheckingAccount : Account, IAccount
     {
         public decimal Fee;
-        public CheckingAccount(decimal amt, decimal feeamt)
+        public CheckingAccount(string name, decimal amt, decimal feeamt)
         {
+            this.owner = name;
             this.balance = amt;
             Fee = feeamt;
         }
