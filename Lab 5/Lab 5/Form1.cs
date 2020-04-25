@@ -24,9 +24,10 @@ namespace Lab_5
 
         private void btnInterest_Click(object sender, EventArgs e)
         {
-            if(lstAcc.SelectedItem != SavingsAccount)
-            SavingsAccount addint = (SavingsAccount)lstAcc.SelectedItem;
+            if(lstAcc.SelectedItem is SavingsAccount)
+            {
 
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -37,6 +38,35 @@ namespace Lab_5
             bank.AddChecking("Jones", 234, 1.0M);
             bank.AddSavings("Jones", 10000, 0.02M);
             bank.AddChecking("Doe", 124, 1.0M);
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            decimal amt = Convert.ToDecimal(txtAmount.Text);
+            if (lstAcc.SelectedItem is SavingsAccount)
+            {
+                SavingsAccount holder = (SavingsAccount)lstAcc.SelectedItem;
+                if (cmbTrans.Text == "Credit")
+                {
+                    holder.Credit(amt);
+                }
+                else
+                {
+                    holder.Debit(amt);
+                }
+            }
+            else if (lstAcc.SelectedItem is CheckingAccount)
+            {
+                CheckingAccount holder = (CheckingAccount)lstAcc.SelectedItem;
+                if (cmbTrans.Text == "Credit")
+                {
+                    holder.Credit(amt);
+                }
+                else
+                {
+                    holder.Debit(amt);
+                }
+            }
         }
     }
 }

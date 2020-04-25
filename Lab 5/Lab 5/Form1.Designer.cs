@@ -78,6 +78,9 @@
             // cmbTrans
             // 
             this.cmbTrans.FormattingEnabled = true;
+            this.cmbTrans.Items.AddRange(new object[] {
+            "Credit",
+            "Debit"});
             this.cmbTrans.Location = new System.Drawing.Point(349, 30);
             this.cmbTrans.Name = "cmbTrans";
             this.cmbTrans.Size = new System.Drawing.Size(195, 24);
@@ -127,6 +130,7 @@
             this.btnUpdate.TabIndex = 9;
             this.btnUpdate.Text = "Update Account";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
