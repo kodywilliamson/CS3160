@@ -43,6 +43,9 @@ namespace Lab_5
             bank.AddChecking("Jones", 234, 1.0M);
             bank.AddSavings("Jones", 10000, 0.02M);
             bank.AddChecking("Doe", 124, 1.0M);
+            bank.Iterator();
+            lstAcc.Items.Add(Console.ReadLine());
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

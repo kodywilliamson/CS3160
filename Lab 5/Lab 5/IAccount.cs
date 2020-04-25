@@ -8,8 +8,8 @@ namespace Lab_5
 {
     interface IAccount
     {
-        void Credit(decimal);
-        void Debit(decimal);
+        void Credit(decimal amt);
+        void Debit(decimal amt);
         decimal Balance { get; }
     }
 }

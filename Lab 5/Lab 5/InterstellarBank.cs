@@ -23,11 +23,11 @@ namespace Lab_5
         {
             accountList.Add(new SavingsAccount(name, amt, interest));
         }
-        public static void Iterator()
+        public void Iterator()
         {
             foreach(Object obj in accountList)
             {
-
+                Console.WriteLine(obj.ToString());
             }
         }
     }
