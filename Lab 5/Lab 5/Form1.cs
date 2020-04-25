@@ -26,7 +26,12 @@ namespace Lab_5
         {
             if(lstAcc.SelectedItem is SavingsAccount)
             {
-
+                SavingsAccount holder = (SavingsAccount)lstAcc.SelectedItem;
+                holder.Credit(holder.CalculateInterest());
+            }
+            else
+            {
+                txtMess.Text = "Cannot add interest to CheckingAccount";
             }
         }
 
