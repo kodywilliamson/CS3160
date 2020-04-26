@@ -18,6 +18,7 @@ namespace Lab_5
             InitializeComponent();
         }
 
+        //Button to allow interest to be calculated and added/check if interest can be added
         private void btnInterest_Click(object sender, EventArgs e)
         {
             if(lstAcc.SelectedItem is SavingsAccount)
@@ -33,6 +34,7 @@ namespace Lab_5
             btnInterest.Enabled = false;
         }
 
+        //Loads the form while also populating the bank arraylist
         private void Form1_Load(object sender, EventArgs e)
         {
             bank = new InterstellarBank();
@@ -44,6 +46,7 @@ namespace Lab_5
             UpdateBox();
         }
 
+        //Updates the account selected if correct inputs are given to update the account
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             decimal amt;
@@ -100,11 +103,13 @@ namespace Lab_5
             txtAmount.Text = "";
         }
 
+        //Exits program
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //Function to update listbox after changes are made
         private void UpdateBox()
         {
             btnUpdate.Enabled = false;
@@ -117,6 +122,7 @@ namespace Lab_5
             }
         }
 
+        //If listbox selection changes, this triggers to update the form
         private void lstAcc_SelectedIndexChanged(object sender, EventArgs e)
         {
             btnUpdate.Enabled = true;
