@@ -7,9 +7,9 @@ using System.Collections;
 
 namespace Lab_5
 {
-    class InterstellarBank
+    class InterstellarBank : IEnumerable
     {
-        private ArrayList accountList;
+        private static ArrayList accountList = new ArrayList();
 
         public InterstellarBank()
         {
@@ -23,12 +23,13 @@ namespace Lab_5
         {
             accountList.Add(new SavingsAccount(name, amt, interest));
         }
-        public void Iterator()
+        public IEnumerator GetEnumerator()
         {
             foreach(Object obj in accountList)
             {
-                Console.WriteLine(obj.ToString());
+                yield return obj.ToString();
             }
         }
+
     }
 }
