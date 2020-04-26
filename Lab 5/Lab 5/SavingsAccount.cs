@@ -34,7 +34,7 @@ namespace Lab_5
         public decimal Balance { get { return balance; } }
         public override string ToString()
         {
-            return ($"Savings: {this.owner} {this.Balance:C2}");
+            return ($"Savings: {this.owner, -37} {this.Balance:C2}");
         }
         public decimal CalculateInterest()
         {

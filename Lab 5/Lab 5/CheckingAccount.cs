@@ -36,7 +36,7 @@ namespace Lab_5
         public decimal Balance { get { return balance; } }
         public override string ToString()
         {
-            return ($"Checking: {this.owner} {this.Balance:C2}");
+            return ($"Checking: {this.owner, -37} {this.Balance:C2}");
         }
     }
 }

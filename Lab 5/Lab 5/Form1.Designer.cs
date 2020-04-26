@@ -79,6 +79,7 @@
             // 
             // cmbTrans
             // 
+            this.cmbTrans.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTrans.FormattingEnabled = true;
             this.cmbTrans.Items.AddRange(new object[] {
             "Credit",

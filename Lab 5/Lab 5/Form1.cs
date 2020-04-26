@@ -28,12 +28,10 @@ namespace Lab_5
             if(lstAcc.SelectedItem is SavingsAccount)
             {
                 SavingsAccount holder = (SavingsAccount)lstAcc.SelectedItem;
-                MessageBox.Show("True");
                 holder.Credit(holder.CalculateInterest());
             }
             else
             {
-                MessageBox.Show("false");
                 txtMess.Text = "Cannot add interest to CheckingAccount";
             }
             UpdateBox();
@@ -53,7 +51,6 @@ namespace Lab_5
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //var tester = lstAcc.SelectedItem;
             decimal amt = Convert.ToDecimal(txtAmount.Text);
             if (lstAcc.SelectedItem is SavingsAccount)
             {
@@ -81,6 +78,8 @@ namespace Lab_5
             }
             UpdateBox();
             btnUpdate.Enabled = false;
+            cmbTrans.Text = "";
+            txtAmount.Text = "";
         }
 
         private void btnExit_Click(object sender, EventArgs e)
