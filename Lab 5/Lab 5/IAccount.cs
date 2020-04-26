@@ -9,7 +9,7 @@ namespace Lab_5
     interface IAccount
     {
         void Credit(decimal amt);
-        void Debit(decimal amt);
+        bool Debit(decimal amt);
         decimal Balance { get; }
     }
 }

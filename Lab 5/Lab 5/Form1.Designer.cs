@@ -88,7 +88,6 @@
             this.cmbTrans.Name = "cmbTrans";
             this.cmbTrans.Size = new System.Drawing.Size(195, 24);
             this.cmbTrans.TabIndex = 4;
-            this.cmbTrans.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // lblTrans
             // 

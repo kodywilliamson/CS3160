@@ -18,11 +18,6 @@ namespace Lab_5
             InitializeComponent();
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnInterest_Click(object sender, EventArgs e)
         {
             if(lstAcc.SelectedItem is SavingsAccount)
@@ -51,29 +46,52 @@ namespace Lab_5
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            decimal amt = Convert.ToDecimal(txtAmount.Text);
-            if (lstAcc.SelectedItem is SavingsAccount)
+            decimal amt;
+            if (!decimal.TryParse(txtAmount.Text, out amt))
             {
-                SavingsAccount holder = (SavingsAccount)lstAcc.SelectedItem;
-                if (cmbTrans.Text == "Credit")
-                {
-                    holder.Credit(amt);
-                }
-                else
-                {
-                    holder.Debit(amt);
-                }
+                txtMess.Text = "Must input valid number in Amount box";
             }
-            else if (lstAcc.SelectedItem is CheckingAccount)
+            else
             {
-                CheckingAccount holder = (CheckingAccount)lstAcc.SelectedItem;
-                if (cmbTrans.Text == "Credit")
+                if (lstAcc.SelectedItem is SavingsAccount)
                 {
-                    holder.Credit(amt);
+                    SavingsAccount holder = (SavingsAccount)lstAcc.SelectedItem;
+                    if (cmbTrans.Text == "Credit")
+                    {
+                        holder.Credit(amt);
+                        txtMess.Text = $"{amt} credited to account";
+                    }
+                    else
+                    {
+                        if (!holder.Debit(amt))
+                        {
+                            txtMess.Text = "Insufficient funds, no money debited";
+                        }
+                        else
+                        {
+                            txtMess.Text = $"{amt} debited from account";
+                        }
+                    }
                 }
-                else
+                else if (lstAcc.SelectedItem is CheckingAccount)
                 {
-                    holder.Debit(amt);
+                    CheckingAccount holder = (CheckingAccount)lstAcc.SelectedItem;
+                    if (cmbTrans.Text == "Credit")
+                    {
+                        holder.Credit(amt);
+                        txtMess.Text = $"{amt} credited to account";
+                    }
+                    else
+                    {
+                        if (!holder.Debit(amt))
+                        {
+                            txtMess.Text = "Insufficient funds, no money debited";
+                        }
+                        else
+                        {
+                            txtMess.Text = $"{amt} debited from account";
+                        }
+                    }
                 }
             }
             UpdateBox();
@@ -89,6 +107,8 @@ namespace Lab_5
 
         private void UpdateBox()
         {
+            btnUpdate.Enabled = false;
+            btnInterest.Enabled = false;
             lstAcc.Items.Clear();
             var iter = bank.GetEnumerator();
             while (iter.MoveNext())

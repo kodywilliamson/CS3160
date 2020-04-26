@@ -20,15 +20,16 @@ namespace Lab_5
         {
             this.balance += amt;
         }
-        public void Debit(decimal amt)
+        public bool Debit(decimal amt)
         {
             if (amt < this.balance)
             {
                 this.balance -= amt;
+                return true;
             }
             else
             {
-                MessageBox.Show("Insufficient Funds");
+                return false;
             }
         }
         public decimal Balance { get { return balance; } }
