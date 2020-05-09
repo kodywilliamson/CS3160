@@ -1,0 +1,10 @@
+F:\CS 3160 Spring 2017\L A B S\Lab 6\Lab6\obj\Debug\PhoneApp.csprojResolveAssemblyReference.cache
+F:\CS 3160 Spring 2017\L A B S\Lab 6\Lab6\obj\Debug\PhoneApp.Form1.resources
+F:\CS 3160 Spring 2017\L A B S\Lab 6\Lab6\obj\Debug\Lab6.Properties.Resources.resources
+F:\CS 3160 Spring 2017\L A B S\Lab 6\Lab6\obj\Debug\PhoneApp.csproj.GenerateResource.Cache
+F:\CS 3160 Spring 2017\L A B S\Lab 6\Lab6\obj\Debug\PhoneApp.PhoneForm.resources
+F:\CS 3160 Spring 2017\L A B S\Lab 6\Lab6\bin\Debug\Lab6.exe.config
+F:\CS 3160 Spring 2017\L A B S\Lab 6\Lab6\bin\Debug\Lab6.exe
+F:\CS 3160 Spring 2017\L A B S\Lab 6\Lab6\bin\Debug\Lab6.pdb
+F:\CS 3160 Spring 2017\L A B S\Lab 6\Lab6\obj\Debug\Lab6.exe
+F:\CS 3160 Spring 2017\L A B S\Lab 6\Lab6\obj\Debug\Lab6.pdb

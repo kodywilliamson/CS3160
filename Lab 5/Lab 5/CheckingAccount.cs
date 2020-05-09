@@ -48,7 +48,7 @@ namespace Lab_5
         //ToString override function
         public override string ToString()
         {
-            return ($"Checking: {this.owner, -25} {this.Balance:C2}");
+            return ($"Checking: {this.owner, -37} {this.Balance, 10:C2}");
         }
     }
 }

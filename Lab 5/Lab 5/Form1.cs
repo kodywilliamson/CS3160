@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Authors: Caudill, Connor; Williamson, Kody
+//Class: CS3160
+//Date: 25 April 2020
+//Instructor: Prof. Carlson
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
