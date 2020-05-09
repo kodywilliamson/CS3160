@@ -92,5 +92,24 @@ namespace PhoneApp
             // and causes the file to be written.
             if (!Program.errorFlag) app.WritePhones();
         }
+
+        private void mnuMerge_Click(object sender, EventArgs e)
+        {
+            // Set the filter for the open file dialog
+            this.dlgOpenFile.Filter = DataAccess.FileFilter;
+            // Get the name of the input file
+            if (this.dlgOpenFile.ShowDialog() == DialogResult.OK)
+                fileName = this.dlgOpenFile.FileName;
+            else
+            {
+                Program.errorFlag = true;
+                this.Close();
+            }
+
+            //Enabling buttons
+            mnuSave.Enabled = true;
+            mnuEdit.Enabled = true;
+            mnuRemove.Enabled = true;
+        }
     }
 }
