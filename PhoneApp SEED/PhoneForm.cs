@@ -37,15 +37,39 @@ namespace PhoneApp
             this.Close();
         }
 
-        private void txtName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
+            NewPhone = null;
             this.Close();
+        }
+
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            if (Phone.ValidateName(txtName.Text) == Phone.FormatError)
+            {
+                errorPhone.SetError(txtName, "Invalid Name.");
+                txtPhone.Enabled = false;
+            }
+            else
+            {
+                errorPhone.SetError(txtName, null);
+                txtPhone.Enabled = true;
+            }
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            if (Phone.ValidatePhoneNumber(txtPhone.Text) == Phone.FormatError)
+            {
+                errorPhone.SetError(txtPhone, "Invalid Phone Number.");
+                btnOK.Enabled = false;
+            }
+            else
+            {
+                errorPhone.SetError(txtPhone, null);
+                btnOK.Enabled = true;
+            }
         }
     }
 }

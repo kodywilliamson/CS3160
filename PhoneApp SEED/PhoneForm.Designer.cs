@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.errorPhone = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorPhone)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -75,6 +78,7 @@
             // 
             // btnOK
             // 
+            this.btnOK.Enabled = false;
             this.btnOK.Location = new System.Drawing.Point(224, 108);
             this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
@@ -94,6 +98,10 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // errorPhone
+            // 
+            this.errorPhone.ContainerControl = this;
+            // 
             // PhoneForm
             // 
             this.AcceptButton = this.btnOK;
@@ -110,6 +118,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PhoneForm";
             this.Text = "Edit Phone Information";
+            ((System.ComponentModel.ISupportInitialize)(this.errorPhone)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +132,6 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ErrorProvider errorPhone;
     }
 }

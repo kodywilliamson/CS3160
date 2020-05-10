@@ -131,6 +131,9 @@ namespace PhoneApp
 
         private void mnuEdit_Click(object sender, EventArgs e)
         {
+            Phone edit = (Phone)lstNames.SelectedItem;
+            app.EditPhone(edit);
+            lstNames.SelectedItem = edit;
             change = true;
         }
 
