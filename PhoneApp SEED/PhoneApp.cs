@@ -76,6 +76,18 @@ namespace PhoneApp
             phoneList.Add(ph);
             dataModified = true;
         }
+
+        public void EditPhone(Phone ph)
+        {
+            if (this.txtName.Text != "")
+            {
+                ph.PhoneNumber = this.txtName.Text;
+            }
+            if (this.txtPhone.Text != "")
+            {
+                ph.Name = this.txtPhone.Text.;
+            }
+        }
     }
 }
 

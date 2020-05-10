@@ -41,16 +41,16 @@
             this.lblName.Location = new System.Drawing.Point(21, 16);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(45, 16);
+            this.lblName.Size = new System.Drawing.Size(104, 38);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "&Name";
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(91, 16);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(232, 22);
+            this.txtName.Size = new System.Drawing.Size(232, 44);
             this.txtName.TabIndex = 1;
             // 
             // lblPhone
@@ -59,22 +59,22 @@
             this.lblPhone.Location = new System.Drawing.Point(21, 60);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(47, 16);
+            this.lblPhone.Size = new System.Drawing.Size(111, 38);
             this.lblPhone.TabIndex = 2;
             this.lblPhone.Text = "Phone";
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(91, 60);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(232, 22);
+            this.txtPhone.Size = new System.Drawing.Size(232, 44);
             this.txtPhone.TabIndex = 3;
             // 
             // btnOK
             // 
             this.btnOK.Location = new System.Drawing.Point(224, 108);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(4);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(100, 28);
             this.btnOK.TabIndex = 4;
@@ -85,7 +85,7 @@
             // PhoneForm
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 37F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 162);
             this.Controls.Add(this.btnOK);
@@ -94,9 +94,9 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PhoneForm";
-            this.Text = "New Phone";
+            this.Text = "Edit Phone Information";
             this.ResumeLayout(false);
             this.PerformLayout();
 

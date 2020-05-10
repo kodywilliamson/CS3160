@@ -17,6 +17,8 @@ namespace PhoneApp
         // This (app) refers to the object that contains the application
         // logic.
         private PhoneApp app;
+        private string fileName;
+        bool change = false;
 
         public Form1()
         {
@@ -34,6 +36,7 @@ namespace PhoneApp
                     app.NewPhone(frm.NewPhone);
                     this.lstNames.Items.Add(frm.NewPhone);
                     this.lstNames.SelectedIndex = 0;
+                    change = true;
                 }
             }
             catch (Exception exc)
@@ -110,6 +113,65 @@ namespace PhoneApp
             mnuSave.Enabled = true;
             mnuEdit.Enabled = true;
             mnuRemove.Enabled = true;
+            change = true;
+        }
+
+        private void mnuRemove_Click(object sender, EventArgs e)
+        {
+            string message = "Are you sure you want to delete?";
+            string title = "Confirmation";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+
+            result = MessageBox.Show(message, title, buttons);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
+                lstNames.Items.RemoveAt(lstNames.SelectedIndex);
+                change = true;
+            }
+            else
+            {
+                this.Close();
+            }
+        }
+
+        private void mnuInsert_Click(object sender, EventArgs e)
+        {
+            change = true;
+            //Enabling buttons
+            mnuSave.Enabled = true;
+            mnuEdit.Enabled = true;
+            mnuRemove.Enabled = true;
+        }
+
+        private void mnuEdit_Click(object sender, EventArgs e)
+        {
+            change = true;
+        }
+
+        private void mnuExit_Click(object sender, EventArgs e)
+        {
+            if( change == true)
+            {
+                string message = "You have unsaved changes. Do you want to save these changes?";
+                string title = "Unsaved Changes";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
+                DialogResult result;
+
+                result = MessageBox.Show(message, title, buttons);
+                this.Close();
+            }
+        }
+
+        private void mnuSave_Click(object sender, EventArgs e)
+        {
+            change = false;
+        }
+
+        private void PhoneNumberDisplay()
+        {
+            txtPhone.Text = ((Phone)this.lstNames.SelectedItem).PhoneNumber;
         }
     }
 }

@@ -45,7 +45,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(41, 33);
+            this.txtPhone.Location = new System.Drawing.Point(41, 62);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(260, 44);
@@ -55,7 +55,7 @@
             // 
             this.lstNames.FormattingEnabled = true;
             this.lstNames.ItemHeight = 37;
-            this.lstNames.Location = new System.Drawing.Point(41, 86);
+            this.lstNames.Location = new System.Drawing.Point(41, 128);
             this.lstNames.Margin = new System.Windows.Forms.Padding(4);
             this.lstNames.Name = "lstNames";
             this.lstNames.Size = new System.Drawing.Size(260, 189);
@@ -71,7 +71,7 @@
             this.phoneMenu});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(863, 52);
+            this.menuStrip1.Size = new System.Drawing.Size(863, 49);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,12 +98,14 @@
             this.mnuSave.Name = "mnuSave";
             this.mnuSave.Size = new System.Drawing.Size(448, 54);
             this.mnuSave.Text = "Save As...";
+            this.mnuSave.Click += new System.EventHandler(this.mnuSave_Click);
             // 
             // mnuExit
             // 
             this.mnuExit.Name = "mnuExit";
             this.mnuExit.Size = new System.Drawing.Size(448, 54);
             this.mnuExit.Text = "Exit";
+            this.mnuExit.Click += new System.EventHandler(this.mnuExit_Click);
             // 
             // phoneMenu
             // 
@@ -121,12 +123,14 @@
             this.mnuEdit.Name = "mnuEdit";
             this.mnuEdit.Size = new System.Drawing.Size(448, 54);
             this.mnuEdit.Text = "Edit...";
+            this.mnuEdit.Click += new System.EventHandler(this.mnuEdit_Click);
             // 
             // mnuInsert
             // 
             this.mnuInsert.Name = "mnuInsert";
             this.mnuInsert.Size = new System.Drawing.Size(448, 54);
             this.mnuInsert.Text = "Insert...";
+            this.mnuInsert.Click += new System.EventHandler(this.mnuInsert_Click);
             // 
             // mnuRemove
             // 
@@ -134,6 +138,7 @@
             this.mnuRemove.Name = "mnuRemove";
             this.mnuRemove.Size = new System.Drawing.Size(448, 54);
             this.mnuRemove.Text = "Remove...";
+            this.mnuRemove.Click += new System.EventHandler(this.mnuRemove_Click);
             // 
             // Form1
             // 
