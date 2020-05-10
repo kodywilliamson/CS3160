@@ -13,8 +13,11 @@ namespace Lab6
 
         public MyFieldException(string msg, string field, string val) : base(msg)
         {
+            FieldExceptionForm fail;
             fieldName = field;
             wrongValue = val;
+            fail = new FieldExceptionForm(this);
+            fail.ShowDialog();
         }
         public string GetField()
         {
