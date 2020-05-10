@@ -122,6 +122,21 @@ namespace PhoneApp
 
         private void mnuInsert_Click(object sender, EventArgs e)
         {
+            // Try to add a new phone number to the list
+            try
+            {
+                PhoneForm frm = new PhoneForm();
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    app.NewPhone(frm.NewPhone);
+                    this.lstNames.Items.Add(frm.NewPhone);
+                    this.lstNames.SelectedIndex = 0;
+                }
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             change = true;
             //Enabling buttons
             mnuSave.Enabled = true;
