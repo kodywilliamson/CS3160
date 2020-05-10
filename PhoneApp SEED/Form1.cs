@@ -60,6 +60,8 @@ namespace PhoneApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Program.errorFlag = false;
+
             // This presentation tier maintains phone information in
             // the list box.  The ArrayList is needed temporarily to
             // copy the phones from the business tier.
@@ -78,8 +80,6 @@ namespace PhoneApp
         {
             ArrayList phones;
             this.fileName = "";
-            Program.errorFlag = false;
-
             // Set the filter for the open file dialog
             this.dlgOpenFile.Filter = DataAccess.FileFilter;
             // Get the name of the input file
@@ -131,7 +131,7 @@ namespace PhoneApp
                     app.NewPhone(frm.NewPhone);
                     this.lstNames.Items.Add(frm.NewPhone);
                     this.lstNames.SelectedIndex = 0;
-                }
+                } 
             }
             catch (Exception exc)
             {
