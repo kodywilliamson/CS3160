@@ -64,29 +64,7 @@ namespace PhoneApp
             // the list box.  The ArrayList is needed temporarily to
             // copy the phones from the business tier.
 
-            ArrayList phones;
-            string fileName = "";
-            Program.errorFlag = false;
-
-            // Set the filter for the open file dialog
-            this.dlgOpenFile.Filter = DataAccess.FileFilter;
-
-            // Get the name of the input file
-            if (this.dlgOpenFile.ShowDialog() == DialogResult.OK)
-                fileName = this.dlgOpenFile.FileName;
-            else
-            {
-                Program.errorFlag = true;
-                this.Close();
-            }
-            app = new PhoneApp();
-            phones = app.ReadPhones(fileName);
-
             // Add each phone in the array list to the list box
-            foreach (Phone p in phones)
-                this.lstNames.Items.Add(p);
-            if (this.lstNames.Items.Count > 0)
-                this.lstNames.SelectedIndex = 0;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -98,21 +76,32 @@ namespace PhoneApp
 
         private void mnuMerge_Click(object sender, EventArgs e)
         {
+            ArrayList phones;
+            this.fileName = "";
+            Program.errorFlag = false;
+
             // Set the filter for the open file dialog
             this.dlgOpenFile.Filter = DataAccess.FileFilter;
             // Get the name of the input file
             if (this.dlgOpenFile.ShowDialog() == DialogResult.OK)
-                fileName = this.dlgOpenFile.FileName;
+                this.fileName = this.dlgOpenFile.FileName;
             else
             {
                 Program.errorFlag = true;
                 this.Close();
             }
+            app = new PhoneApp();
+            phones = app.ReadPhones(this.fileName);
+
+            foreach (Phone p in phones)
+                this.lstNames.Items.Add(p);
+            if (this.lstNames.Items.Count > 0)
+                this.lstNames.SelectedIndex = 0;
 
             //Enabling buttons
+            mnuRemove.Enabled = true;
             mnuSave.Enabled = true;
             mnuEdit.Enabled = true;
-            mnuRemove.Enabled = true;
             change = true;
         }
 
@@ -126,13 +115,8 @@ namespace PhoneApp
             result = MessageBox.Show(message, title, buttons);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                this.Close();
                 lstNames.Items.RemoveAt(lstNames.SelectedIndex);
                 change = true;
-            }
-            else
-            {
-                this.Close();
             }
         }
 
@@ -172,6 +156,11 @@ namespace PhoneApp
         private void PhoneNumberDisplay()
         {
             txtPhone.Text = ((Phone)this.lstNames.SelectedItem).PhoneNumber;
+        }
+
+        private void lstNames_SelectedValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -79,13 +79,15 @@ namespace PhoneApp
 
         public void EditPhone(Phone ph)
         {
-            if (this.txtName.Text != "")
+            using(PhoneForm EditForm = new PhoneForm())
             {
-                ph.PhoneNumber = this.txtName.Text;
-            }
-            if (this.txtPhone.Text != "")
-            {
-                ph.Name = this.txtPhone.Text.;
+                EditForm.Text = "Edit Phone Information";
+                EditForm.Enabled = true;
+                if (EditForm.ShowDialog() == DialogResult.OK) 
+                {
+                    ph.Name = EditForm.NewPhone.Name;
+                    ph.PhoneNumber = EditForm.NewPhone.PhoneNumber;
+                }
             }
         }
     }
