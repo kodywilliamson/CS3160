@@ -38,6 +38,8 @@ namespace PhoneApp
                     this.lstNames.Items.Add(frm.NewPhone);
                     this.lstNames.SelectedIndex = 0;
                     change = true;
+                    app.Modified();
+                    phones = app.getList();
                 }
             }
             catch (Exception exc)
@@ -66,8 +68,10 @@ namespace PhoneApp
             // This presentation tier maintains phone information in
             // the list box.  The ArrayList is needed temporarily to
             // copy the phones from the business tier.
-
+            phones = app.getList();
             // Add each phone in the array list to the list box
+            foreach (Phone ph in phones)
+                lstNames.Items.Add(ph);
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -116,6 +120,9 @@ namespace PhoneApp
             mnuSave.Enabled = true;
             mnuEdit.Enabled = true;
             change = true;
+            app.Modified();
+            phones = app.getList();
+            updateList();
         }
 
         private void mnuRemove_Click(object sender, EventArgs e)
@@ -128,9 +135,12 @@ namespace PhoneApp
             result = MessageBox.Show(message, title, buttons);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
+                int num = lstNames.SelectedIndex;
                 app.RemovePhone((Phone)lstNames.SelectedItem);
-                this.lstNames.Items.RemoveAt(this.lstNames.SelectedIndex);
                 change = true;
+                app.Modified();
+                phones = app.getList();
+                updateList();
 
             }
         }
@@ -153,6 +163,7 @@ namespace PhoneApp
                 MessageBox.Show(exc.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             change = true;
+            app.Modified();
             //Enabling buttons
             mnuSave.Enabled = true;
             mnuEdit.Enabled = true;
@@ -163,8 +174,10 @@ namespace PhoneApp
         {
             Phone edit = (Phone)lstNames.SelectedItem;
             app.EditPhone(edit);
-            lstNames.SelectedItem = edit;
+            phones = app.getList();
+            updateList();
             change = true;
+            app.Modified();
         }
 
         private void mnuExit_Click(object sender, EventArgs e)
@@ -188,6 +201,7 @@ namespace PhoneApp
 
             app.WritePhones(this.fileName);
             change = false;
+            app.Saved();
         }
 
         private void PhoneNumberDisplay()
@@ -198,6 +212,14 @@ namespace PhoneApp
         private void lstNames_SelectedValueChanged(object sender, EventArgs e)
         {
             PhoneNumberDisplay();
+        }
+
+        private void updateList()
+        {
+            //Clears listbox and repopulates it
+            lstNames.Items.Clear();
+            foreach (Phone ph in phones)
+                lstNames.Items.Add(ph);
         }
     }
 }

@@ -85,18 +85,19 @@ namespace PhoneApp
                 EditForm.Enabled = true;
                 if (EditForm.ShowDialog() == DialogResult.OK) 
                 {
-
-                    ph.Name = EditForm.NewPhone.Name;
-                    ph.PhoneNumber = EditForm.NewPhone.PhoneNumber;
-                    foreach (Phone p in phoneList)
+                    string name;
+                    string phonenumber;
+                    name = EditForm.NewPhone.Name;
+                    phonenumber = EditForm.NewPhone.PhoneNumber;
+                    Phone ph2 = new Phone(name, phonenumber);
+                    foreach (Phone update in phoneList)
                     {
-                        if (p.Equals(ph))
+                        if (update.Equals(ph))
                         {
-                            p.Name = ph.Name;
-                            p.PhoneNumber = ph.PhoneNumber;
+                            update.Name = ph2.Name;
+                            update.PhoneNumber = ph2.PhoneNumber;
                         }
                     }
-
                 }
 
             }
@@ -105,6 +106,21 @@ namespace PhoneApp
         public void RemovePhone(Phone ph)
         {
             phoneList.Remove(ph);
+        }
+
+        public ArrayList getList()
+        {
+            return phoneList;
+        }
+
+        public void Modified()
+        {
+            dataModified = true;
+        }
+
+        public void Saved()
+        {
+            dataModified = false;
         }
     }
 }
