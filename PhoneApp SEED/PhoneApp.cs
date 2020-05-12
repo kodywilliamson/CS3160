@@ -55,7 +55,7 @@ namespace PhoneApp
             return phoneList;
         }
 
-        public void WritePhones()
+        public void WritePhones(string fileName)
         {
             // No need to output anything if the file wasn't modified
             if (dataModified)

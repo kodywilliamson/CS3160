@@ -71,5 +71,10 @@ namespace PhoneApp
                 btnOK.Enabled = true;
             }
         }
+
+        private void PhoneForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

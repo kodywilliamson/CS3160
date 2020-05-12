@@ -16,7 +16,8 @@ namespace PhoneApp
 
         // This (app) refers to the object that contains the application
         // logic.
-        private PhoneApp app;
+        private PhoneApp app = new PhoneApp();
+        ArrayList phones;
         private string fileName;
         bool change = false;
 
@@ -73,12 +74,23 @@ namespace PhoneApp
         {
             // This is called whenever the main form is closed
             // and causes the file to be written.
-            if (!Program.errorFlag) app.WritePhones();
+            if (change == true)
+            {
+                string message = "You have unsaved changes. Do you want to save these changes?";
+                string title = "Unsaved Changes";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
+                DialogResult result;
+
+                result = MessageBox.Show(message, title, buttons);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    if (!Program.errorFlag) app.WritePhones(fileName);
+                }
+            }
         }
 
         private void mnuMerge_Click(object sender, EventArgs e)
         {
-            ArrayList phones;
             this.fileName = "";
             // Set the filter for the open file dialog
             this.dlgOpenFile.Filter = DataAccess.FileFilter;
@@ -90,11 +102,12 @@ namespace PhoneApp
                 Program.errorFlag = true;
                 this.Close();
             }
-            app = new PhoneApp();
             phones = app.ReadPhones(this.fileName);
 
             foreach (Phone p in phones)
+            {
                 this.lstNames.Items.Add(p);
+            }
             if (this.lstNames.Items.Count > 0)
                 this.lstNames.SelectedIndex = 0;
 
@@ -115,7 +128,7 @@ namespace PhoneApp
             result = MessageBox.Show(message, title, buttons);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                lstNames.Items.RemoveAt(lstNames.SelectedIndex);
+                this.lstNames.Items.RemoveAt(this.lstNames.SelectedIndex);
                 change = true;
             }
         }
@@ -154,20 +167,24 @@ namespace PhoneApp
 
         private void mnuExit_Click(object sender, EventArgs e)
         {
-            if( change == true)
-            {
-                string message = "You have unsaved changes. Do you want to save these changes?";
-                string title = "Unsaved Changes";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNoCancel;
-                DialogResult result;
-
-                result = MessageBox.Show(message, title, buttons);
-                this.Close();
-            }
+            this.Close();
         }
 
         private void mnuSave_Click(object sender, EventArgs e)
         {
+            this.fileName = "";
+            // Set the filter for the open file dialog
+            this.dlgOpenFile.Filter = DataAccess.FileFilter;
+            // Get the name of the input file
+            if (this.dlgOpenFile.ShowDialog() == DialogResult.OK)
+                this.fileName = this.dlgOpenFile.FileName;
+            else
+            {
+                Program.errorFlag = true;
+                this.Close();
+            }
+
+            app.WritePhones(this.fileName);
             change = false;
         }
 
@@ -178,7 +195,7 @@ namespace PhoneApp
 
         private void lstNames_SelectedValueChanged(object sender, EventArgs e)
         {
-
+            PhoneNumberDisplay();
         }
     }
 }

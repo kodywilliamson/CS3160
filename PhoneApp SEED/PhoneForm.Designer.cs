@@ -45,7 +45,7 @@
             this.lblName.Location = new System.Drawing.Point(21, 16);
             this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(53, 20);
+            this.lblName.Size = new System.Drawing.Size(45, 16);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "&Name";
             // 
@@ -54,7 +54,7 @@
             this.txtName.Location = new System.Drawing.Point(91, 16);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(232, 26);
+            this.txtName.Size = new System.Drawing.Size(232, 22);
             this.txtName.TabIndex = 1;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
@@ -64,7 +64,7 @@
             this.lblPhone.Location = new System.Drawing.Point(21, 60);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(56, 20);
+            this.lblPhone.Size = new System.Drawing.Size(47, 16);
             this.lblPhone.TabIndex = 2;
             this.lblPhone.Text = "Phone";
             // 
@@ -73,7 +73,7 @@
             this.txtPhone.Location = new System.Drawing.Point(91, 60);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(232, 26);
+            this.txtPhone.Size = new System.Drawing.Size(232, 22);
             this.txtPhone.TabIndex = 3;
             this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
@@ -106,7 +106,7 @@
             // PhoneForm
             // 
             this.AcceptButton = this.btnOK;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 162);
             this.Controls.Add(this.btnCancel);
@@ -119,6 +119,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "PhoneForm";
             this.Text = "Edit Phone Information";
+            this.Load += new System.EventHandler(this.PhoneForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorPhone)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

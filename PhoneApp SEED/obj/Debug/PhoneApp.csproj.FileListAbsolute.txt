@@ -19,3 +19,14 @@ C:\Users\Connor\Documents\CS 3160\CS3160\PhoneApp SEED\obj\Debug\Lab6.Properties
 C:\Users\Connor\Documents\CS 3160\CS3160\PhoneApp SEED\obj\Debug\PhoneApp.csproj.GenerateResource.cache
 C:\Users\Connor\Documents\CS 3160\CS3160\PhoneApp SEED\obj\Debug\Lab6.exe
 C:\Users\Connor\Documents\CS 3160\CS3160\PhoneApp SEED\obj\Debug\Lab6.pdb
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\bin\Debug\Lab6.exe.config
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\bin\Debug\Lab6.exe
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\bin\Debug\Lab6.pdb
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\obj\Debug\PhoneApp.csprojAssemblyReference.cache
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\obj\Debug\Lab6.FieldExceptionForm.resources
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\obj\Debug\PhoneApp.Form1.resources
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\obj\Debug\PhoneApp.PhoneForm.resources
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\obj\Debug\Lab6.Properties.Resources.resources
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\obj\Debug\PhoneApp.csproj.GenerateResource.cache
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\obj\Debug\Lab6.exe
+C:\Users\kodyw\Desktop\CS3160\PhoneApp SEED\obj\Debug\Lab6.pdb
