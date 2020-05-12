@@ -15,9 +15,11 @@ namespace PhoneApp
 
         public Phone NewPhone;
 
-        public PhoneForm()
+        public PhoneForm(string name,string number)
         {
             InitializeComponent();
+            txtName.Text = name;
+            txtPhone.Text = number;
         }
 
         private void btnOK_Click(object sender, EventArgs e)

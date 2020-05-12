@@ -31,7 +31,7 @@ namespace PhoneApp
             // Try to add a new phone number to the list
             try
             {
-                PhoneForm frm = new PhoneForm();
+                PhoneForm frm = new PhoneForm("","");
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     app.NewPhone(frm.NewPhone);
@@ -151,7 +151,7 @@ namespace PhoneApp
             // Try to add a new phone number to the list
             try
             {
-                PhoneForm frm = new PhoneForm();
+                PhoneForm frm = new PhoneForm("","");
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     app.NewPhone(frm.NewPhone);

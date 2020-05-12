@@ -79,7 +79,7 @@ namespace PhoneApp
 
         public void EditPhone(Phone ph)
         {
-            using(PhoneForm EditForm = new PhoneForm())
+            using(PhoneForm EditForm = new PhoneForm(ph.Name, ph.PhoneNumber))
             {
                 EditForm.Text = "Edit Phone Information";
                 EditForm.Enabled = true;
