@@ -135,14 +135,15 @@ namespace PhoneApp
             result = MessageBox.Show(message, title, buttons);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                int num = lstNames.SelectedIndex;
-                app.RemovePhone((Phone)lstNames.SelectedItem);
+                Phone remove = (Phone)lstNames.SelectedItem;
+                app.RemovePhone(remove);
                 change = true;
                 app.Modified();
                 phones = app.getList();
                 updateList();
 
             }
+
         }
 
         private void mnuInsert_Click(object sender, EventArgs e)
