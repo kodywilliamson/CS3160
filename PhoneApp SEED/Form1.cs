@@ -128,8 +128,10 @@ namespace PhoneApp
             result = MessageBox.Show(message, title, buttons);
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
+                app.RemovePhone((Phone)lstNames.SelectedItem);
                 this.lstNames.Items.RemoveAt(this.lstNames.SelectedIndex);
                 change = true;
+
             }
         }
 
