@@ -79,5 +79,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Daftart.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StdDialog\StdDialog.csproj">
+      <Project>{9f28aa23-88c1-4d58-bd15-a3788388ee8f}</Project>
+      <Name>StdDialog</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
