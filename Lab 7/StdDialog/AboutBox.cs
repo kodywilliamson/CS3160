@@ -25,5 +25,10 @@ namespace StdDialog
         {
             this.Close();
         }
+
+        private void AboutBox_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
