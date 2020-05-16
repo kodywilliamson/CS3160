@@ -45,5 +45,11 @@ namespace Lab_7
             Form about = new StdDialog.AboutBox(appLogo, "Simple Text Editor", "Copyright 2020", "Connor Caudill & Kody Williamson");
             about.ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Form SplashScreen = new Splash(appLogo, "Simple Text Editor", "Copyright 2020", "Connor Caudill & Kody Williamson", 5000);
+            SplashScreen.ShowDialog();
+        }
     }
 }
