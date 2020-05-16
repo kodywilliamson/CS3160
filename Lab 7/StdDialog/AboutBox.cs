@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Authors: Connor Caudill & Kody Williamson
+//Class: CS 3160
+//Date: 5/15/2020
+//Instructor: Jadwiga Carlson
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +19,7 @@ namespace StdDialog
     {
         public AboutBox(Image img, string title, string copy, string name)
         {
+            //Constructor gets image to display and strings to display
             InitializeComponent();
             picImg.Image = img;
             lblTitle.Text = title;
@@ -23,12 +29,8 @@ namespace StdDialog
 
         private void btnOk_Click(object sender, EventArgs e)
         {
+
             this.Close();
-        }
-
-        private void AboutBox_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

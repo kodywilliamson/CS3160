@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Authors: Connor Caudill & Kody Williamson
+//Class: CS 3160
+//Date: 5/15/2020
+//Instructor: Jadwiga Carlson
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +18,12 @@ namespace Lab_7
 {
     public partial class Form1 : Form
     {
-        private Image appLogo;
+        private Image appLogo; //stored image for display
         public Form1()
         {
             InitializeComponent();
+
+            //Code from Dr. Carlson to get image from folder
             System.Reflection.Assembly myAssembly = System.Reflection.Assembly.GetExecutingAssembly();
             System.IO.Stream myStream = myAssembly.GetManifestResourceStream("Lab_7.Daftart.jpg");
             appLogo = Image.FromStream(myStream);
@@ -48,6 +55,7 @@ namespace Lab_7
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //On form load, splash screen is displayed to user for 5 seconds
             Form SplashScreen = new Splash(appLogo, "Simple Text Editor", "Copyright 2020", "Connor Caudill & Kody Williamson", 5000);
             SplashScreen.ShowDialog();
         }
