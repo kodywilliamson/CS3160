@@ -76,6 +76,7 @@
             // 
             // tmeSplash
             // 
+            this.tmeSplash.Enabled = true;
             this.tmeSplash.Tick += new System.EventHandler(this.tmeSplash_Tick);
             // 
             // Splash
